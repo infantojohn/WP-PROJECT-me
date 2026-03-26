@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Athletica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="Images/LOGO.png" alt="Prime Athletica Logo">
+        </div>
+
+        <ul class="navlinks">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li class="dropdown">
+                <a href="#">
+                    Location ▼
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="Chennai.html">Chennai</a></li>
+                    <li><a href="bangalore.html">Bangalore</a></li>
+                    <li><a href="hyderabad.html">Hyderabad</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">
+                    Services ▼
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="football.html">Football Training</a></li>
+                    <li><a href="basketball.html">Basketball Training</a></li>
+                    <li><a href="strength.html">Strength & Conditioning</a></li>
+                    <li><a href="speed.html">Speed & Agility</a></li>
+                    <li><a href="rehab.html">Sports Rehab</a></li>
+                    <li><a href="nutrition.html">Nutrition Guidance</a></li>
+                </ul>
+            </li>
+
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="shop.html">Shop</a></li>
+
+        </ul>
+
+    </nav>
+
+    
+
+    <section class="hero">
+
+        <video autoplay muted playsinline class="background-video" id="bgVideo">
+            <source src="videos/video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <h1>Train Hard. Become Elite.</h1>
+        </div>
+
+    </section>
+
+    
+
+    <script>
+        const videos = [
+            "videos/video1.mp4",
+            "videos/video2.mp4",
+            "videos/video3.mp4"
+        ];
+
+        let index = 0;
+        const videoElement = document.getElementById("bgVideo");
+
+        videoElement.addEventListener("ended", function () {
+
+            index++;
+
+            if (index >= videos.length) {
+                index = 0;
+            }
+
+            videoElement.src = videos[index];
+            videoElement.play();
+
+        });
+    </script>
+
+</body>
+</html>
