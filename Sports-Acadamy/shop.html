@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo">
+        <img src="Images/LOGO.png" alt="logo">
+    </div>
+
+    <ul class="navlinks">
+        <li><a href="index.html">Home</a></li>
+
+        <li class="dropdown">
+            <a href="#">Location ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="chennai.html">Chennai</a></li>
+                <li><a href="bangalore.html">Bangalore</a></li>
+                <li><a href="hyderabad.html">Hyderabad</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="#">Services ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="football.html">Football Training</a></li>
+                <li><a href="basketball.html">Basketball Training</a></li>
+                <li><a href="strength.html">Strength & Conditioning</a></li>
+                <li><a href="speed.html">Speed & Agility</a></li>
+                <li><a href="rehab.html">Sports Rehab</a></li>
+                <li><a href="nutrition.html">Nutrition Guidance</a></li>
+            </ul>
+        </li>
+
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="shop.html">Shop</a></li>
+    </ul>
+</nav>
+  <h1 class="title">SPORTS SHOP</h1>
+
+  <div class="shop-container">
+
+    <!-- Product 1 -->
+    <div class="product">
+      <img src="images/football.jpg" width="200" alt="Football">
+      <h3>Football</h3>
+      <p>₹799</p>
+      <button onclick="showCartPopup()">Add to Cart</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product">
+      <img src="images/shoes.jpg" alt="Shoes">
+      <h3>Sports Shoes</h3>
+      <p>₹1999</p>
+      <button onclick="showCartPopup()">Add to Cart</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product">
+      <img src="images/basketball.jpg" alt="Basketball">
+      <h3>Basketball</h3>
+      <p>₹999</p>
+      <button onclick="showCartPopup()">Add to Cart</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product">
+      
+      <img src="images/bat.jpg" alt="Cricket Bat">
+      <h3>Cricket Bat</h3>
+      <p>₹2499</p>
+      <button onclick="showCartPopup()">Add to Cart</button>
+    </div>
+
+  </div>
+
+  <!-- your shop content -->
+  <div class="shop-container">
+  </div>
+
+  <!-- ✅ POPUP goes here -->
+  <div id="cartPopup" class="popup">🛒 Added to cart!</div>
+
+  <!-- ✅ SCRIPT comes AFTER popup -->
+  <script>
+    function showCartPopup() {
+      const popup = document.getElementById("cartPopup");
+
+      popup.classList.add("show");
+
+      setTimeout(() => {
+        popup.classList.remove("show");
+      }, 2000);
+    }
+  </script>
+
+</body>
+</html>

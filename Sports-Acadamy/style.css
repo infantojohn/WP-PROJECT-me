@@ -389,7 +389,6 @@ body {
 
 
 .location-hero {
-    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -431,7 +430,7 @@ body {
 }
 
 .football-hero-bg {
-    padding: 100px 10%;
+    
     text-align: center;
 }
 
@@ -487,7 +486,7 @@ body {
 }
 
 /* TRAINING MODULES SECTION */
-.modules-bg {
+.modules-bg{
     padding: 100px 10%;
     text-align: center;
 }
@@ -691,4 +690,278 @@ h1, h2, h3 {
     background: red;
     transform: translateY(-3px);
     box-shadow: 0 14px 30px rgba(190,23,23,0.6);
+}
+.hero {
+  height: 90vh;
+
+  /* Background image */
+  background: url("images/chennai.jpg") no-repeat center center/cover;
+
+  /* Dark overlay (important for readability) */
+  position: relative;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6); /* dark layer */
+}
+
+/* keep text above overlay */
+.hero h1,
+.hero p {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 80px;
+  letter-spacing: 5px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #ccc;
+}
+
+
+/* Form container */
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Form box */
+.register-form {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 40px;
+  border-radius: 15px;
+  width: 350px;
+  color: white;
+  border: 1px solid #333;
+  backdrop-filter: blur(10px);
+}
+
+/* Title */
+.register-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Inputs */
+.register-form input,
+.register-form select,
+.register-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background: #111;
+  color: white;
+  outline: none;
+}
+
+/* Button */
+.register-form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background: red;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-form button:hover {
+  background: darkred;
+}
+.hero1 {
+  height: 700px;
+  width: 100%;
+
+  /* Background image */
+  background: url("images/bangalore.jpg") no-repeat center center/cover;
+
+  /* Dark overlay (important for readability) */
+  position: relative;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* overlay */
+.hero1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6); /* dark layer */
+}
+
+/* keep text above overlay */
+.hero1 h1,
+.hero1 p {
+  position: relative;
+  z-index: 1;
+}
+
+.hero1 h1 {
+  font-size: 80px;
+  letter-spacing: 5px;
+}
+
+.hero1 p {
+  font-size: 18px;
+  color: #ccc;
+}
+.villain {
+  height: 700px;
+  width: 100%;
+
+  /* Background image */
+  background: url("images/sports.jpg") no-repeat center center/cover;
+
+  /* Dark overlay (important for readability) */
+  position: relative;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* overlay */
+.villain::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6); /* dark layer */
+}
+
+/* keep text above overlay */
+.villain h1,
+.villain p,.villain button {
+  position: relative;
+  z-index: 1;
+}
+
+.villain h1 {
+  font-size: 80px;
+  letter-spacing: 5px;
+}
+
+.villain p {
+  font-size: 18px;
+  color: #ccc;
+}
+.popup {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  background: #111;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.4s;
+
+  border-left: 4px solid red;
+}
+
+/* visible state */
+.popup.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, black, darkred);
+  color: white;
+  text-align: center;
+}
+
+.title {
+  margin: 30px 0;
+  font-size: 40px;
+}
+
+/* Grid layout */
+.shop-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+}
+
+/* Product card */
+.product {
+  background: #111;
+  padding: 20px;
+  border-radius: 15px;
+  width: 220px;
+  transition: 0.3s;
+  border: 1px solid #333;
+}
+
+.product:hover {
+  transform: translateY(-10px);
+  border-color: red;
+}
+
+/* Images */
+.product img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Button */
+.product button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background: red;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product button:hover {
+  background: darkred;
 }

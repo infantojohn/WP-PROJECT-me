@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration</title>
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo">
+        <img src="Images/LOGO.png" alt="logo">
+    </div>
+
+    <ul class="navlinks">
+        <li><a href="index.html">Home</a></li>
+
+        <li class="dropdown">
+            <a href="#">Location ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="chennai.html">Chennai</a></li>
+                <li><a href="bangalore.html">Bangalore</a></li>
+                <li><a href="hyderabad.html">Hyderabad</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="#">Services ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="football.html">Football Training</a></li>
+                <li><a href="basketball.html">Basketball Training</a></li>
+                <li><a href="strength.html">Strength & Conditioning</a></li>
+                <li><a href="speed.html">Speed & Agility</a></li>
+                <li><a href="rehab.html">Sports Rehab</a></li>
+                <li><a href="nutrition.html">Nutrition Guidance</a></li>
+            </ul>
+        </li>
+
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="shop.html">Shop</a></li>
+    </ul>
+</nav>
+  <div class="form-container">
+    <form class="register-form">
+      <h2>Register Now</h2>
+
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="tel" placeholder="Phone Number" required>
+
+      <select required>
+        <option value="">Select Sport</option>
+        <option>Basketball</option>
+        <option>Football</option>
+        <option>Speed training</option>
+        <option>Strength training</option>
+      </select>
+
+      <select required>
+        <option value="">Select Location</option>
+        <option>Chennai</option>
+        <option>Hyderabad</option>
+        <option>Bangalore</option>
+      </select>
+
+      <select required>
+        <option value="">Training Level</option>
+        <option>Beginner</option>
+        <option>Intermediate</option>
+        <option>Elite</option>
+      </select>
+
+      <textarea placeholder="Additional Notes (Optional)"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <div id="popup" class="popup">✅ Response has been noted!</div>
+    <script>
+const form = document.querySelector(".register-form");
+const popup = document.getElementById("popup");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault(); // stop page reload
+
+  popup.classList.add("show");
+
+  setTimeout(() => {
+    popup.classList.remove("show");
+  }, 3000);
+
+  form.reset(); // optional
+});
+</script>
+
+</body>
+</html>
